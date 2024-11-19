@@ -1,0 +1,84 @@
+<nav>
+    <div class="logo-name">
+        <div class="logo-image">
+            <img src="../img/gato-logo.png" alt="Logo">
+        </div>
+        <span class="logo_name">Meonager</span>
+    </div>
+
+    <div class="menu-items">
+        <ul class="nav-links">
+            <li><a href="panel-principal.html">
+                    <i class="fas fa-home"></i>
+                    <span class="link-name">Principal</span>
+                </a></li>
+            <li><a href="panel-calendario.html">
+                    <i class="fas fa-box"></i>
+                    <span class="link-name">Productos</span>
+                </a></li>
+            <li><a href="panel-notificaciones.html">
+                    <i class="fas fa-list"></i>
+                    <span class="link-name">Categorias</span>
+                </a></li>
+            <li><a href="panel-.html">
+                    <i class="fas fa-users"></i>
+                    <span class="link-name">Clientes</span>
+                </a></li>
+            <li><a href="panel-registros.html">
+                    <i class="fas fa-truck"></i>
+                    <span class="link-name">Proveedores</span>
+                </a></li>
+            <br>
+            <br>
+            <li><a href="panel-reportes.html">
+                    <i class="fas fa-file-alt"></i>
+                    <span class="link-name">Reportes</span>
+                </a></li>
+            <li><a href="panel-configuraciones.html">
+                    <i class="fas fa-cogs"></i>
+                    <span class="link-name">Configuracion</span>
+                </a></li>
+        </ul>
+
+        
+
+
+        <ul class="logout-mode">
+            <li><a href="login.html">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="link-name">Cerrar Sesion</span>
+                </a></li>
+
+            <li class="mode">
+                <a href="#">
+                    <i class="fas fa-moon"></i>
+                    <span class="link-name">Modo Oscuro</span>
+                </a>
+
+                <div class="mode-toggle">
+                    <span class="switch"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section class="dashboard">
+    <div class="top">
+        <i class="fas fa-bars sidebar-toggle"></i>
+
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar aquí...">
+        </div>  
+        <img src="../img/gato-logo.png" alt="Logo">
+    </div>
+
+    <div class="contenido">
+
+    </div>
+</section>
+
+<script src="../js/dashboard.js"></script>
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">

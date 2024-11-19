@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/calendario.css">
+    <title>Calendario de riego</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="../img/gato-logo.png" alt="Logo">
+            </div>
+            <span class="logo_name">MeowGarden</span>
+        </div>
+    
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="panel-principal.html">
+                        <i class="fas fa-home"></i>
+                        <span class="link-name">Inicio</span>
+                    </a></li>
+                <li><a href="panel-calendario.html">
+                        <i class="fa-solid fa-calendar"></i>
+                        <span class="link-name">Calendario</span>
+                    </a></li>
+                <li><a href="panel-notificaciones.html">
+                        <i class="fa-sharp fa-solid fa-bell"></i>
+                        <span class="link-name">Notificaciones</span>
+                    </a></li>
+                <li><a href="panel-.html">
+                        <i class="fas fa-history"></i>
+                        <span class="link-name">Historial</span>
+                    </a></li>
+            </ul>
+    
+            <ul class="logout-mode">
+                <li><a href="login.html">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span class="link-name">Cerrar Sesion</span>
+                    </a></li>
+    
+                <li class="mode">
+                    <a href="#">
+                        <i class="fas fa-moon"></i>
+                        <span class="link-name">Modo Oscuro</span>
+                    </a>
+    
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="dashboard">
+        <div class="top">
+            <i class="fas fa-bars sidebar-toggle"></i>
+    
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Buscar aquí...">
+            </div>  
+            <img src="../img/gato-logo.png" alt="Logo">
+        </div>
+    
+        <div class="contenido">
+            <div class="container">
+                <h1>Monitoreo de Orquídeas</h1>
+        
+                <!-- Sección de Calendario de Riego -->
+                <div class="section">
+                    <h2>Calendario de Riego</h2>
+                    <label for="days">Seleccione los días de riego:</label>
+                    <div class="days-container">
+                        <label><input type="checkbox" name="days" value="Lunes"> Lunes</label>
+                        <label><input type="checkbox" name="days" value="Martes"> Martes</label>
+                        <label><input type="checkbox" name="days" value="Miércoles"> Miércoles</label>
+                        <label><input type="checkbox" name="days" value="Jueves"> Jueves</label>
+                        <label><input type="checkbox" name="days" value="Viernes"> Viernes</label>
+                        <label><input type="checkbox" name="days" value="Sábado"> Sábado</label>
+                        <label><input type="checkbox" name="days" value="Domingo"> Domingo</label>
+                    </div>
+        
+                    <label for="watering-time">Seleccione la hora de riego:</label>
+                    <input type="time" id="watering-time">
+                    <button onclick="guardarCalendarioRiego()">Guardar Calendario</button>
+
+                    <!-- Mensaje de confirmación -->
+                    <p id="mensaje-programacion" style="color: green; margin-top: 10px;"></p>
+
+            </div>
+
+        </div>
+        <script>
+            function guardarCalendarioRiego() {
+                // Obtener la hora seleccionada por el usuario
+                const horaRiego = document.getElementById("watering-time").value;
+                const mensajeProgramacion = document.getElementById("mensaje-programacion");
+            
+                // Verificar si la hora está seleccionada
+                if (!horaRiego) {
+                    mensajeProgramacion.textContent = "Por favor, seleccione una hora de riego.";
+                    return;
+                }
+            
+                // Obtener la hora actual
+                const ahora = new Date();
+                const horaSeleccionada = new Date();
+                const [hora, minuto] = horaRiego.split(":");
+                horaSeleccionada.setHours(hora, minuto, 0, 0);
+            
+                // Calcular la diferencia en milisegundos
+                let diferenciaTiempo = horaSeleccionada - ahora;
+            
+                // Si la hora ya pasó, establecer para el día siguiente
+                if (diferenciaTiempo < 0) {
+                    diferenciaTiempo += 24 * 60 * 60 * 1000; // Añadir 24 horas en milisegundos
+                }
+            
+                // Convertir a horas y minutos
+                const horas = Math.floor(diferenciaTiempo / (1000 * 60 * 60));
+                const minutos = Math.floor((diferenciaTiempo % (1000 * 60 * 60)) / (1000 * 60));
+            
+                // Mostrar mensaje de confirmación
+                mensajeProgramacion.textContent = `Alarma programada para ${horas} horas y ${minutos} minutos más.`;
+            }
+            </script>
+    </section>
+    
+    <script src="../js/dashboard.js"></script>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</body>
+</html>

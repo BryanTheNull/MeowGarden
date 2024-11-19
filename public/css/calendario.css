@@ -1,0 +1,98 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+
+/* Contenedor principal */
+.contenido {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilos para el contenedor */
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Título principal */
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Secciones */
+.section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Estilos para etiquetas y inputs */
+label {
+    font-size: 16px;
+    color: #444;
+}
+
+/* Contenedor de días */
+.days-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.days-container label {
+    background-color: #e0e0e0;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.days-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Input para la hora de riego */
+input[type="time"] {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Botón para guardar */
+button {
+    background-color: #19701c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #054c08;
+}
