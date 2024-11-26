@@ -1,9 +1,9 @@
 // Importar librerias a utilizar
 const express = require('express');
 const router = express.Router();
-const principalController = require('../controller/principalController');
+const registroController = require('../controller/registroController');
 
 // Ruta para obtener todos los productos
-router.get('/sensor', principalController.obtenerDatosSensor);   
+router.get('/registros', registroController.consultarRegistros);   
 
 module.exports = router;

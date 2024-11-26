@@ -13,4 +13,21 @@ CREATE TABLE IF NOT EXISTS dht11 (
     temperatura FLOAT NOT NULL
 );
 
+-- Crear tabla para guardar calendario de riego
+CREATE TABLE IF NOT EXISTS calendario(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    lunes boolean,
+	martes boolean,
+    miercoles boolean,
+    jueves boolean,
+    viernes boolean,
+    sabado boolean,
+    domingo boolean,
+    hora TIME
+);
+
 SELECT * FROM dht11;
+
+SELECT * FROM calendario;
+
+

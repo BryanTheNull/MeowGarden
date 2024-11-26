@@ -1,11 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/principal.css">
     <title>Registros Historicos</title>
 </head>
+
 <body>
-    
+    <section title="Dashboard">
+        <nav>
+            <div class="logo-name">
+                <div class="logo-image">
+                    <img src="../img/gato-logo.png" alt="Logo">
+                </div>
+                <span class="logo_name">MeowGarden</span>
+            </div>
+
+            <div class="menu-items">
+                <ul class="nav-links">
+
+                    <li><a href="../html/panel-principal.html">
+                            <i class="fas fa-home"></i>
+                            <span class="link-name">Inicio</span>
+                        </a></li>
+
+                    <li><a href="../html/panel-calendario.html">
+                            <i class="fa-solid fa-calendar"></i>
+                            <span class="link-name">Calendario</span>
+                        </a></li>
+
+                    <li><a href="../html/panel-registros.html">
+                            <i class="fas fa-history"></i>
+                            <span class="link-name">Historial</span>
+                        </a></li>
+                </ul>
+
+                <ul class="logout-mode">
+                    <li><a href="login.html">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span class="link-name">Cerrar Sesion</span>
+                        </a></li>
+
+                    <li class="mode">
+                        <a href="#">
+                            <i class="fas fa-moon"></i>
+                            <span class="link-name">Modo Oscuro</span>
+                        </a>
+
+                        <div class="mode-toggle">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="dashboard">
+            <div class="top">
+                <i class="fas fa-bars sidebar-toggle"></i>
+
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar aquí...">
+                </div>
+                <img src="../img/gato-logo.png" alt="Logo">
+            </div>
+
+            <div class="contenido">
+                <h2>REGISTROS HISTORICOS DE HUMEDAD Y TEMPERATURA</h2>                
+                <table id="tabla-registros">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>FECHA</th>
+                            <th>HORA</th>
+                            <th>HUMEDAD</th>
+                            <th>TEMPERATURA</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-body"></tbody>
+                </table>
+            </div>
+           
+
+
+            
+            
+        </section>
+
+        <script src="../js/dashboard.js"></script>
+        <SCript src="../js/registros.js"></SCript>
+        <link rel="stylesheet" href="../css/dashboard.css">
+        <link rel="stylesheet" href="../css/registros.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    </section>
 </body>
+
 </html>

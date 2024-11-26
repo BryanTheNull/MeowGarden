@@ -1,0 +1,61 @@
+/* Importar Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+/* Variables del estilo */
+:root {
+    --primary-color: #045603; /* Color principal */
+    --panel-color: #FFF; /* Fondo de panel */
+    --text-color: #000; /* Color de texto */
+    --border-color: #e6e5e5; /* Color de borde */
+    --box6-color: #daeaf6; /* Color para fila al pasar el mouse */
+}
+
+body {
+    background-color: #f4f4f4;  /* Fondo suave */
+    color: var(--text-color);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+
+
+/* Estilo del título */
+h2 {
+    color: var(--primary-color);
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilos de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: var(--panel-color);  /* Fondo blanco para la tabla */
+    border: 1px solid var(--border-color);  /* Borde de la tabla */
+}
+
+/* Cabecera de la tabla */
+table th {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Estilos de las celdas */
+table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Filas alternadas */
+table tr:nth-child(even) {
+    background-color: #eaf8f0; /* Fila par con fondo verde suave */
+}
